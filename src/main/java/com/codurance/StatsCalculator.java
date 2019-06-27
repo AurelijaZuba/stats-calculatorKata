@@ -1,5 +1,7 @@
 package com.codurance;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 
 public class StatsCalculator {
@@ -43,10 +45,14 @@ public class StatsCalculator {
     }
 
     public double averageValue() {
-        if (numbers.size() > 1)
-            return (numbers.get(0).doubleValue()
-                    + numbers.get(1).doubleValue())
-                    / numbers.size();
-        return 0;
+        double value = 0;
+        for (int i = 0; i < numbers.size(); i++) {
+            value += numbers.get(i);
+        }
+        double results = value / numbers.size();
+        BigDecimal bigDecimal = new BigDecimal(results);
+        bigDecimal = bigDecimal.setScale(6, RoundingMode.HALF_UP);
+
+        return bigDecimal.doubleValue();
     }
 }
