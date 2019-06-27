@@ -76,11 +76,13 @@ public class StatsCalculatorShould {
 
     @ParameterizedTest
     @MethodSource("averageNumberProvider")
-    void name(List<Integer> numbers, double expected) {
+    void return_average_number(List<Integer> numbers, double expected) {
         StatsCalculator statsCalculator = new StatsCalculator(numbers);
 
         double result = statsCalculator.averageValue();
 
         assertThat(result).isEqualTo(expected);
     }
+
+
 }
