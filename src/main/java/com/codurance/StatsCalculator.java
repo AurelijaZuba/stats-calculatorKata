@@ -43,6 +43,6 @@ public class StatsCalculator {
     }
 
     public double averageValue() {
-        throw new UnsupportedOperationException();
+        return 0;
     }
 }
