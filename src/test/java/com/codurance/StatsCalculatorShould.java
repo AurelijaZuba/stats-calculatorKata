@@ -66,7 +66,8 @@ public class StatsCalculatorShould {
 
     private static Stream<Arguments> averageNumberProvider(){
         return Stream.of(
-                arguments(asList(0), 0)
+                arguments(asList(0), 0),
+                arguments(asList(1, 1), 1)
         );
     }
 
