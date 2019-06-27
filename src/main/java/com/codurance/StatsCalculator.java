@@ -25,6 +25,11 @@ public class StatsCalculator {
     }
 
     public int findMaximumValue() {
-        return 0;
+        int value = numbers.get(0);
+        for (int i = 0; i < numbers.size(); i++) {
+            if(value <= numbers.get(i))
+                value = numbers.get(i);
+        }
+        return value;
     }
 }
