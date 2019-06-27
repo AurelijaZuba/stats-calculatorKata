@@ -38,10 +38,10 @@ public class StatsCalculatorShould {
     private static Stream<Arguments> maximumNumberCalculationProvider() {
         return Stream.of(
                 arguments(asList(0), 0),
-                arguments(asList(0,  1), 1)
+                arguments(asList(0,  1), 1),
+                arguments(asList(6, 9, 15, -2, 92, 11), 92)
         );
     }
-
 
     @ParameterizedTest
     @MethodSource("maximumNumberCalculationProvider")
