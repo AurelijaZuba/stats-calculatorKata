@@ -1,5 +1,6 @@
 package com.codurance;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -29,6 +30,24 @@ public class StatsCalculatorShould {
         StatsCalculator statsCalculator = new StatsCalculator(numbers);
 
         int result = statsCalculator.findMinimumValue();
+
+        assertThat(result).isEqualTo(expected);
+    }
+
+
+    private static Stream<Arguments> maximumNumberCalculationProvider() {
+        return Stream.of(
+                arguments(asList(0), 0)
+        );
+    }
+
+
+    @ParameterizedTest
+    @MethodSource("maximumNumberCalculationProvider")
+    public void return_the_maximum_from_a_list_of_values(List<Integer> numbers, int expected) {
+        StatsCalculator statsCalculator = new StatsCalculator(numbers);
+
+        int result = statsCalculator.findMaximumValue();
 
         assertThat(result).isEqualTo(expected);
     }
