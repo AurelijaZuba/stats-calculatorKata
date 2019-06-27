@@ -21,4 +21,17 @@ public class StatsCalculatorShould {
 
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    void return_the_minimum_from_a_list_of_multiple_values() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(0);
+        numbers.add(-1);
+        StatsCalculator statsCalculator = new StatsCalculator(numbers);
+        int expected = -1;
+
+        int result = statsCalculator.calculateMinimum();
+
+        assertThat(result).isEqualTo(expected);
+    }
 }
