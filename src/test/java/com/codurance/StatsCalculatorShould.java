@@ -34,4 +34,17 @@ public class StatsCalculatorShould {
 
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    void foo() {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(5);
+        numbers.add(1);
+        StatsCalculator statsCalculator = new StatsCalculator(numbers);
+        int expected = 1;
+
+        int result = statsCalculator.findMinimumValue();
+
+        assertThat(result).isEqualTo(expected);
+    }
 }
