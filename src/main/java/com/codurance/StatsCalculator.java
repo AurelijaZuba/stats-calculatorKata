@@ -27,13 +27,13 @@ public class StatsCalculator {
     }
 
     private int smallestValue(int valueA, int valueB) {
-        if(valueA >= valueB)
+        if (valueA >= valueB)
             return valueB;
         return valueA;
     }
 
     private int largestValue(int valueA, int valueB) {
-        if(valueA <= valueB)
+        if (valueA <= valueB)
             return valueB;
         return valueA;
     }
@@ -44,7 +44,9 @@ public class StatsCalculator {
 
     public double averageValue() {
         if (numbers.size() > 1)
-            return 1;
+            return (numbers.get(0).doubleValue()
+                    + numbers.get(1).doubleValue())
+                    / numbers.size();
         return 0;
     }
 }
