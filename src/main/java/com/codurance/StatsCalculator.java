@@ -10,12 +10,17 @@ public class StatsCalculator {
         this.numbers = numbers;
     }
 
-    public int calculateMinimum() {
+    public int findMinimumValue() {
         int value = 0;
         for (int i = 0; i < numbers.size(); i++) {
-            if(value >= numbers.get(i))
-                value = numbers.get(i);
+            value = smallestValue(value, numbers.get(i));
         }
         return value;
+    }
+
+    private int smallestValue(int valueA, int valueB) {
+        if(valueA >= valueB)
+            return valueB;
+        return valueA;
     }
 }
