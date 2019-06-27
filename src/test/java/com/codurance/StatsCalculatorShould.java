@@ -11,13 +11,13 @@ public class StatsCalculatorShould {
 
     @Test
     void return_single_value_for_minimum_value() {
-        List<Integer> stats = new ArrayList<>();
-        stats.add(0);
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(0);
         int expected = 0;
 
-        StatsCalculator statsCalculator = new StatsCalculator(stats);
+        StatsCalculator statsCalculator = new StatsCalculator(numbers);
 
-        int result = statsCalculator.calculateMinimum();
+        int result = statsCalculator.findMinimumValue();
 
         assertThat(result).isEqualTo(expected);
     }
@@ -30,7 +30,7 @@ public class StatsCalculatorShould {
         StatsCalculator statsCalculator = new StatsCalculator(numbers);
         int expected = -1;
 
-        int result = statsCalculator.calculateMinimum();
+        int result = statsCalculator.findMinimumValue();
 
         assertThat(result).isEqualTo(expected);
     }
