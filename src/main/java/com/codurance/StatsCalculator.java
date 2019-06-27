@@ -11,7 +11,7 @@ public class StatsCalculator {
     }
 
     public int findMinimumValue() {
-        int value = 0;
+        int value = numbers.get(0);
         for (int i = 0; i < numbers.size(); i++) {
             value = smallestValue(value, numbers.get(i));
         }
