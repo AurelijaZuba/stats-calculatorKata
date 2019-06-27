@@ -39,6 +39,6 @@ public class StatsCalculator {
     }
 
     public int numberOfElements() {
-        return 6;
+        return numbers.size();
     }
 }
