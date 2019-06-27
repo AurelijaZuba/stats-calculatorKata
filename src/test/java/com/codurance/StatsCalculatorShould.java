@@ -52,4 +52,15 @@ public class StatsCalculatorShould {
 
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    void return_number_of_elements() {
+        List<Integer> numbers = asList(6, 9, 15, -2, 92, 11);
+        StatsCalculator statsCalculator = new StatsCalculator(numbers);
+
+        int expected = 6;
+        int result = statsCalculator.numberOfElements();
+
+        assertThat(result).isEqualTo(expected);
+    }
 }

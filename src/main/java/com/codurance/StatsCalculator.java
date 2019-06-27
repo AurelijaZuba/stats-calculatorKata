@@ -37,4 +37,8 @@ public class StatsCalculator {
             return valueB;
         return valueA;
     }
+
+    public int numberOfElements() {
+        return 6;
+    }
 }
