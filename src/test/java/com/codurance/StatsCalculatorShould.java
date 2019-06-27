@@ -69,7 +69,8 @@ public class StatsCalculatorShould {
                 arguments(asList(0), 0),
                 arguments(asList(1, 1), 1),
                 arguments(asList(1, 2), 1.5),
-                arguments(asList(1, 4, 5), 3.333333)
+                arguments(asList(1, 4, 5), 3.333333),
+                arguments(asList(6, 9, 15, -2, 92, 11), 21.833333)
         );
     }
 
