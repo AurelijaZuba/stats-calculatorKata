@@ -50,6 +50,10 @@ public class StatsCalculator {
             value += numbers.get(i);
         }
         double results = value / numbers.size();
+        return roundAverageValue(results);
+    }
+
+    private double roundAverageValue(double results) {
         BigDecimal bigDecimal = new BigDecimal(results);
         bigDecimal = bigDecimal.setScale(6, RoundingMode.HALF_UP);
 
