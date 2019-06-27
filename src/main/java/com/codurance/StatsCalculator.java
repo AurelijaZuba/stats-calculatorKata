@@ -25,6 +25,6 @@ public class StatsCalculator {
     }
 
     public int findMaximumValue() {
-        throw new UnsupportedOperationException();
+        return 0;
     }
 }
