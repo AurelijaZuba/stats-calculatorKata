@@ -63,4 +63,20 @@ public class StatsCalculatorShould {
 
         assertThat(result).isEqualTo(expected);
     }
+
+    private static Stream<Arguments> averageNumberProvider(){
+        return Stream.of(
+                arguments(asList(0), 0)
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("averageNumberProvider")
+    void name(List<Integer> numbers, double expected) {
+        StatsCalculator statsCalculator = new StatsCalculator(numbers);
+
+        double result = statsCalculator.averageValue();
+
+        assertThat(result).isEqualTo(expected);
+    }
 }

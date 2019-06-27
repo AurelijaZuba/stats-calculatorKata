@@ -41,4 +41,8 @@ public class StatsCalculator {
     public int numberOfElements() {
         return numbers.size();
     }
+
+    public double averageValue() {
+        throw new UnsupportedOperationException();
+    }
 }
