@@ -18,18 +18,23 @@ public class StatsCalculator {
         return value;
     }
 
+    public int findMaximumValue() {
+        int value = numbers.get(0);
+        for (int i = 0; i < numbers.size(); i++) {
+            value = largestValue(value, numbers.get(i));
+        }
+        return value;
+    }
+
     private int smallestValue(int valueA, int valueB) {
         if(valueA >= valueB)
             return valueB;
         return valueA;
     }
 
-    public int findMaximumValue() {
-        int value = numbers.get(0);
-        for (int i = 0; i < numbers.size(); i++) {
-            if(value <= numbers.get(i))
-                value = numbers.get(i);
-        }
-        return value;
+    private int largestValue(int valueA, int valueB) {
+        if(valueA <= valueB)
+            return valueB;
+        return valueA;
     }
 }
