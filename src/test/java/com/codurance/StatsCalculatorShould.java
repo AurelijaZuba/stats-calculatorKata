@@ -37,7 +37,8 @@ public class StatsCalculatorShould {
 
     private static Stream<Arguments> maximumNumberCalculationProvider() {
         return Stream.of(
-                arguments(asList(0), 0)
+                arguments(asList(0), 0),
+                arguments(asList(0,  1), 1)
         );
     }
 
