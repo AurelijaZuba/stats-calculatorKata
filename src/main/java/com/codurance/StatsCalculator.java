@@ -11,6 +11,11 @@ public class StatsCalculator {
     }
 
     public int calculateMinimum() {
-        return 0;
+        int value = 0;
+        for (int i = 0; i < numbers.size(); i++) {
+            if(value >= numbers.get(i))
+                value = numbers.get(i);
+        }
+        return value;
     }
 }
